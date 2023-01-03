@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #FFFDD0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.MainB">
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="1000.0" AnchorPane.topAnchor="0.0">
+            <right>
+                <AnchorPane prefHeight="700.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="108.0" prefWidth="606.0" style="-fx-border-color: black;">
+                            <children>
+                                <Label fx:id="messageResult" layoutX="12.0" layoutY="24.0" prefHeight="60.0" prefWidth="583.0" text="-" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane layoutY="182.0" prefHeight="592.0" prefWidth="606.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label fx:id="tree" alignment="TOP_LEFT" layoutY="56.0" prefHeight="538.0" prefWidth="606.0" text="-">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                </Label>
+                                <Label layoutX="1.0" prefHeight="48.0" prefWidth="605.0" text="THE TREE IS:">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </right>
+         <center>
+                <VBox prefHeight="700.0" prefWidth="400.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="200.0" text="MENU" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets left="100.0" right="50.0" top="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                            <padding>
+                                <Insets left="60.0" right="50.0" />
+                            </padding>
+                        </Label>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <items>
+                                <Label prefHeight="20.0" prefWidth="120.0" text="ADD VALUE" textAlignment="CENTER">
+                                    <padding>
+                                        <Insets left="5.0" right="10.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="valueInsert" prefWidth="170.0" />
+                                <Button mnemonicParsing="false" onAction="#insertValue" prefHeight="25.0" prefWidth="70.0" text="Add" />
+                            </items>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <items>
+                                <Label prefHeight="20.0" prefWidth="120.0" text="DELETE VALUE" textAlignment="CENTER">
+                                    <padding>
+                                        <Insets left="5.0" right="10.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="valueDelete" prefWidth="170.0" />
+                                <Button mnemonicParsing="false" onAction="#deleteValue" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+                            </items>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <items>
+                                <Label prefHeight="20.0" prefWidth="120.0" text="SEARCH VALUE" textAlignment="CENTER">
+                                    <padding>
+                                        <Insets left="5.0" right="10.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="valueSearch" prefWidth="170.0" />
+                                <Button mnemonicParsing="false" onAction="#searchValue" prefHeight="25.0" prefWidth="70.0" text="Search" />
+                            </items>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <items>
+                                <Button mnemonicParsing="false" onAction="#minimum" prefHeight="25.0" prefWidth="368.0" text="MINIMUM" />
+                            </items>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                     <items>
+                                <Button mnemonicParsing="false" onAction="#maximum" prefHeight="25.0" prefWidth="368.0" text="MAXIMUM" />
+                     </items>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                     <items>
+                        <Button mnemonicParsing="false" onAction="#inorderDisplay" prefHeight="25.0" prefWidth="368.0" text="INORDER DISPLAY" />
+                     </items>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+                            <items>
+                                <Button fx:id="backButton" mnemonicParsing="false" onAction="#userBack" prefHeight="25.0" prefWidth="182.0" text="BACK" />
+                                <Button fx:id="removeAll" mnemonicParsing="false" onAction="#removeAll" prefHeight="25.0" prefWidth="182.0" text="REMOVE ALL" />
+                            </items>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="90.0" />
+                            </VBox.margin>
+                        </ToolBar>
+                    </children>
+                </VBox>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
